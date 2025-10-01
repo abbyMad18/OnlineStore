@@ -1,15 +1,21 @@
 
-public class Book
+public class Book extends ItemForSale
 {
   private String title;
   private String publisher;
 
   public Book(String t, Author a, int p, String pub){
-    super();
+    super(p, a);
     title = t;
-    creator = a;
-    price = p;
     publisher = pub;
+  }
+
+  public String getTitle(){
+    return title;
+  }
+
+  public String getPublisher(){
+    return publisher;
   }
   
 }
