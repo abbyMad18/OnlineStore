@@ -30,6 +30,27 @@ public class Store
     profit = 0;
     items = null;
   }
-
+  
+  public ArrayList showItems(){
+    return items;
+  }
+  
+  public void addItem(ItemForSale new){
+    items.add(new);
+  }
+  
+  public void sellItem(ItemForSale sold){
+    items.remove(sold);
+    profit+=sold.getPrice();
+  }
+  
+  public Object creator(ItemForSale item){
+    if(item instanceOf Book){
+      return item.getAuthor();
+    }
+    else{
+      return item.getCreator();
+    }
+  }
   
 }
